@@ -1,32 +1,10 @@
-# Ignore GUI (not needed in Docker)
 gui/
-
-# Ignore data — Docker should not build with large images
 data/
-
-# Python cache
+*.md
+*.log
 __pycache__/
 *.pyc
-*.pyo
-*.pyd
-
-# Model artifacts except the needed one
-models/**/*.zip
-models/**/*.onnx
-models/**/*.engine
-
-# OS / Editor files
-.env
-*.env
 .vscode/
 .idea/
-.DS_Store
-Thumbs.db
-
-# Git artifacts
 .git/
 .gitignore
-
-# Virtual environment
-venv/
-.env/
