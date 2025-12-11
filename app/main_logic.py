@@ -1,4 +1,4 @@
-from app.image_analyzer import ImageAnalyzer
+from .image_analyzer import ImageAnalyzer
 from app.video_analyzer import VideoAnalyzer
 from pathlib import Path
 
