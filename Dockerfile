@@ -1,22 +1,29 @@
+# Use official Python 3.10 slim image
 FROM python:3.10-slim
 
+# Set working directory inside container
 WORKDIR /app
 
-# System dependencies for OpenCV
+# Install system dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
     libgl1 \
     libglib2.0-0 \
     && rm -rf /var/lib/apt/lists/*
 
-# Install Python dependencies
+# Copy and install Python dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy only the code needed for inference/testing
+# Copy app code
 COPY app/ ./app
-COPY models/ ./models
 
-# Ensure model file exists
-RUN test -f models/last.pt || (echo "Model file missing: models/last.pt" && exit 1)
+# Copy only the model weights (keep your current folder structure)
+COPY models/YOLOv5_model/weights/last.pt ./models/YOLOv5_model/weights/last.pt
 
+# Optional: verify that the model file exists
+RUN test -f models/YOLOv5_model/weights/last.pt || \
+    (echo "Model file missing: models/YOLOv5_model/weights/last.pt" && exit 1)
+
+# Default command: run the headless main logic
 CMD ["python", "app/main_logic.py"]
