@@ -1,5 +1,5 @@
 from .image_analyzer import ImageAnalyzer
-from app.video_analyzer import VideoAnalyzer
+from .video_analyzer import VideoAnalyzer
 from pathlib import Path
 
 def main():
