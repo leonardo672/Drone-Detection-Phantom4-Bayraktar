@@ -1,27 +1,50 @@
+# ---------------------------
+# PyTorch CPU (Official index)
+# ---------------------------
 --index-url https://download.pytorch.org/whl/cpu
 
 torch==2.0.1
 torchvision==0.15.2
 torchaudio==2.0.2
 
-# OpenCV for Docker (works on all Linux)
+# ---------------------------
+# Computer Vision (Docker-safe)
+# ---------------------------
 opencv-python-headless==4.8.0.74
 Pillow==10.0.0
 
-PyQt5==5.15.9
-PyQt5-sip==12.12.1
+# ---------------------------
+# GUI Framework (REMOVE in Docker)
+# ---------------------------
+# PyQt5==5.15.9
+# PyQt5-sip==12.12.1
 
+# ---------------------------
+# Database
+# ---------------------------
 pyodbc==4.0.39
 pandas==2.0.3
 
+# ---------------------------
+# Scientific Computing
+# ---------------------------
 numpy==1.24.3
 scipy==1.10.1
 
+# ---------------------------
+# YOLOv5 / Ultralytics
+# ---------------------------
 ultralytics==8.0.186
 
+# ---------------------------
+# Utilities
+# ---------------------------
 pathlib2==2.3.0
 matplotlib==3.7.1
 seaborn==0.12.2
 
-jupyter==1.0.0
-ipykernel==6.22.0
+# ---------------------------
+# Optional: Jupyter
+# ---------------------------
+# jupyter==1.0.0
+# ipykernel==6.22.0
