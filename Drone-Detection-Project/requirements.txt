@@ -4,8 +4,8 @@ torch==2.0.1
 torchvision==0.15.2
 torchaudio==2.0.2
 
-# OpenCV (Linux compatible)
-opencv-python==4.8.0.74
+# OpenCV for Docker (works on all Linux)
+opencv-python-headless==4.8.0.74
 Pillow==10.0.0
 
 PyQt5==5.15.9
