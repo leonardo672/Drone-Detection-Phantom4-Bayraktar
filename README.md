@@ -2,12 +2,26 @@
 
 This project is a Drone Detection System that analyzes both images and videos to detect drones such as Bayraktar TB2 and Phantom 4 using a custom-trained YOLOv5 deep learning model.
 
+## ⚙ Primary Execution Environment
+
+This project is primarily designed to be **executed and demonstrated in a Jupyter Notebook environment**.
+
+The Jupyter implementation represents the **reference and stable execution flow** used for:
+- New objects recognition
+- Dataset testing
+- Model validation
+- Automated detection pipelines
+
+A Docker-based pipeline is included to illustrate the intended deployment architecture; however, due to upstream YOLOv5 and PyTorch dependency constraints, container execution may require additional compatibility adjustments.
+
+## 🔍 Pipeline Overview
+
 The system provides a fully automated pipeline that includes:
-- Image detection (process all .jpg images in a folder).
+- Image detection (process all `.jpg` images in a folder).
 - Video detection (process multiple drone videos automatically).
 - Object extraction and saving detected drones to an output directory.
-- Dockerized deployment for consistent cross-platform execution.
-- CPU-only PyTorch optimized docker environment.
+- Dockerized deployment for architectural and cross-platform reference.
+- CPU-only PyTorch optimized environment.
 
 -----
 
